@@ -16,13 +16,6 @@ import {
   DropdownMenuTrigger,
 } from "./dropdown-menu";
 
-const routes = [
-  {
-    href: "#home",
-    label: "Home",
-  },
-];
-
 export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -36,21 +29,22 @@ export function Navbar() {
         </div>
         <div className="hidden md:flex">
           <nav className="flex items-center space-x-6 text-sm font-medium">
-            {routes.map((route) => (
-              <Link
-                key={route.href}
-                href={route.href}
-                className="transition-colors hover:text-foreground/80"
-              >
-                {route.label}
-              </Link>
-            ))}
+            <Link
+              href="/"
+              className="transition-colors hover:text-foreground/80"
+            >
+              Home
+            </Link>
 
             <DropdownMenu>
               <DropdownMenuTrigger>Solutions</DropdownMenuTrigger>
               <DropdownMenuContent>
-                <DropdownMenuLabel>Portfolio</DropdownMenuLabel>
-                <DropdownMenuItem>Our Capabilities</DropdownMenuItem>
+                <DropdownMenuLabel>
+                  <Link href={"/#solutions"}>Portfolio</Link>
+                </DropdownMenuLabel>
+                <DropdownMenuItem>
+                  <Link href={"/our-capabilities"}>Our Capabilities</Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
@@ -78,16 +72,12 @@ export function Navbar() {
               <SheetContent side="right">
                 <div className="px-2">
                   <div className="flex flex-col space-y-4 py-4">
-                    {routes.map((route) => (
-                      <Link
-                        key={route.href}
-                        href={route.href}
-                        className="text-lg font-medium"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {route.label}
-                      </Link>
-                    ))}
+                    <Link
+                      href="/"
+                      className="transition-colors hover:text-foreground/80"
+                    >
+                      Home
+                    </Link>
                   </div>
                   <div className="flex flex-col space-y-2 pt-4">
                     <ThemeToggle />
