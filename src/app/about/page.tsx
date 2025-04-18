@@ -7,9 +7,9 @@ function About() {
         id="about"
         className="mx-auto container space-y-6 py-8 md:py-12 lg:py-24"
       >
-        <div className="mx-auto flex max-w-6xl flex-col items-center space-y-4 text-center">
+        <div className="mx-auto flex max-w-5xl flex-col items-center space-y-4">
           <h1 className="text-3xl md:text-4xl font-semibold mb-10">About</h1>
-          <p className="mx-3 text-gray-200">
+          <p className="mx-3 dark:text-gray-200">
             Aumble is a technology solutions provider specializing in custom web
             application development, end-to-end software testing services, and
             enterprise resource planning (ERP) systems. We help businesses
